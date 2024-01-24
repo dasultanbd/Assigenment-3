@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./link.css">
+  <!-- tailwind custom classes -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bg-primary': '#FF4240',
+            'bg-button': '#131318',
+            'bg-button1': '#FF4240',
+            'p-text1': 'rgba(255, 255, 255, 0.60)',
+            rotate: {
+              '140': '140deg',
+              '145': '220deg',
+            }
+
+
+          }
+
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .font-text {
+      font-family: "Manrope";
+
+    }
+    .border1{
+    border: 1px solid #dedede;
+}
+.radial-progress::before {
+    transform: rotate(165deg);
+}
+  </style>
+</head>
+
+<body class="font-text">
+  <!-- header sec  -->
+  <header class="container mx-auto">
+
+    <div class="navbar bg-base-100 py-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a class="text-[#FF4240]">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost gap-0 font-extrabold	 text-2xl lg:text-4xl">Hockey<span
+            class="text-[#FF4240] font-black">’</span>s</a>
+      </div>
+      <div class="navbar-center hidden font-normal	 lg:flex">
+        <ul class="menu menu-horizontal px-1 text-base">
+          <li><a class="text-[#FF4240]">Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Pages</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="navbar-end  mt-6ml-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 mr-24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+        <a class="btn bg-[#FF4240] text-[#FFF]">Get Ticket</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto ">
+    
+    <div class="p-4">
+      <div class="carousel w-full">
+        <div id="slide1"
+          class="carousel-item relative w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url('./Images/1.png')] bg-no-repeat bg-cover h-[22vh] lg:h-[58vh] rounded-2xl">
+          <div class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[88%]">
+            <a href="#slide2" class="btn btn-circle bg-[#131318] text-white">❮</a>
+            <a href="#slide2" class="btn btn-circle bg-[#131318] text-white">❯</a>
+          </div>
+        </div>
+
+
+        <div id="slide2" class="carousel-item relative w-full">
+          <img class="rounded-2xl" src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+            class="w-full" />
+          <div class="absolute flex justify-start transform -translate-y-1/2 left-5 right-5 top-[88%]">
+            <a href="#slide1" class="btn btn-circle bg-[#131318] text-white">❮</a>
+            <a href="#slide1" class="btn btn-circle bg-[#131318] text-white">❯</a>
+          </div>
+        </div>
+      </div>
+      <div class=" lg:h-[130px] lg:w-2/4 lg:ml-[45%] bg-[#131318] lg:-translate-y-40 lg:mr-8 rounded-2xl">
+        <div class="p-4 items-center text-center">
+          <h1 class="text-white font-extrabold text-xl lg:text-2xl"> Meet all the heroes from the field<h1>
+              <p class=" lg:text-lg text-[#626266] mt-3">Others are health workers or agriculture experts, working to
+                bring the most cutting-edge science to the most remote places on earth. From an Ebola survivor in ...
+
+              </p>
+        </div>
+      </div>
+    </div>
+  <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%]"></div>
+
+    <!--Hockey Club start-->
+
+    <section class="mx-auto my-7">
+      <div class="w-[60%] text-center mx-auto">
+        <h2 class="text-[36px] font-bold py-4 mt-8">Professional Hockeys Club</h2>
+        <p>The National Hockey League is a professional ice hockey league in North America comprising 32 teams—25 in the
+          United States and 7 in Canada.</p>
+      </div>
+
+      <div class="lg:flex justify-around text-center my-10 ">
+        <div class="mx-auto mb-5 lg:mb-10 lg:w-[20%] gap-5">
+          <div class="radial-progress text-[#ff4240]" style="--value:87;" role="progressbar"><span
+              class="text-[#000000] font-extrabold	">87%</span></div>
+          <div class="mt-5">
+            <h3 class="font-semibold text-xl	">Prayer Facility</h3>
+            <p class="mt-2"> professional ice hockey league in North America</p>
+          </div>
+        </div>
+        <div class="mx-auto mb-5 lg:mb-10 lg:w-[20%] gap-5">
+          <div class="radial-progress text-[#49d293]" style="--value:95;" role="progressbar"><span
+              class="text-[#000000] font-extrabold	">95%</span></div>
+          <div class="mt-5">
+            <h3 class="font-semibold text-xl	">Prayer Facility</h3>
+            <p class="mt-2">North America comprising 32 teams—25</p>
+          </div>
+        </div>
+        <div class="mx-auto mb-5 lg:mb-10 lg:w-[20%] gap-5">
+          <div class="radial-progress text-[#ffb546]" style="--value:90;" role="progressbar"><span
+              class="text-[#000000] font-extrabold	">90%</span></div>
+          <div class="mt-5">
+            <h3 class="font-bold">Prayer Facility</h3>
+            <p class="mt-2"> professional ice hockey league in North America</p>
+          </div>
+        </div>
+        <div class="mx-auto mb-5 lg:mb-10 lg:w-[20%] gap-5">
+          <div class="radial-progress text-[#4c8df1]" style="--value:80;" role="progressbar"><span
+              class="text-[#000000] font-extrabold	">80%</span></div>
+          <div class="mt-5">
+            <h3 class="font-semibold text-xl	">Prayer Facility</h3>
+            <p class="mt-2"> professional ice hockey league in North America</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%] mt-20"></div>
+    <!-- Hockey Club end -->
+
+
+    <section>
+      <div class="pt-5">
+        <h1 class="text-3xl	font-extrabold text-center mt-6">Program Sections</h1>
+        <p class="text-center w-[60%] mx-auto	 pt-5 text-[#6d6d70]">Program sections, or psects, are simply a section of code or data. They are a way of grouping together parts of a program (via the psect's name) even though the source code cannot be physically adjacent in the source file, or even where spread over several modules
+        </p>
+      </div>
+      <div>
+        <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%] mt-20"></div>
+
+        <div class="lg:flex gap-8 lg:ml-44 lg:pt-14">
+          <div class="card mb-4 lg:w-[573px] bg-base-100  image-full">
+            <figure><img src="./Images/2.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title text-3xl	pt-8">Junior Program</h2>
+              <p>The JPO Programme allows young professionals to gain practical experience in multi-lateral technical
+                co-operation at an early stage in their career.</p>
+              <div class="card-actions justify-start">
+                <button class="btn bg-[#FF4240] border-[#FF4240] text-[#FFF] px-6">Register Now!</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-[573px] bg-base-100  image-full">
+            <figure><img src="./Images/2.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title text-3xl	pt-8">Teenager Program</h2>
+              <p>It's a unique experience for the local teens and the group from Haarlem to have a week long encounter
+                together of Bible study, songs and some great sports ....</p>
+              <div class="card-actions justify-start">
+                <button class="btn bg-[#FF4240] border-[#FF4240] text-[#FFF] px-6">Register Now!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card  lg:w-[1170px] bg-base-100  image-full mt-6 mx-auto">
+          <figure><img src="./Images/4.png" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title text-3xl	pt-60">Junior Program</h2>
+            <p>A program of advanced learning that leads to an occupation governed by a mandatory regulatory body.
+              Members of the profession must complete a licensing exam ...Accreditation Standards and Guidelines for the
+              Professional Program in Pharmacy Leading to the Doctor of Pharmacy Degree. </p>
+            <div class="card-actions justify-start">
+              <button class="btn bg-[#FF4240] border-[#FF4240] text-[#FFF] px-6">Register Now!</button>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      </div>
+    </section>
+
+    <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%] mt-20"></div>
+    <!-- Our New Products  -->
+    <section>
+
+      <div class="pt-5">
+        <h1 class="text-3xl	font-extrabold text-center mt-6">Our New Products</h1>
+        <p class="text-center w-[60%] mx-auto	 pt-5 text-[#6d6d70] mb-8">New-to-the-world products: these are
+          innovative products that create completely new markets. Recent examples include digital music players, such
+          ...
+
+        </p>
+      </div>
+      <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%] mt-20"></div>
+
+      <div>
+        <div class="gap-6 mt-4 mb-4  lg:flex  lg:ml-40">
+          <div class="card lg:flex card-side bg-base-100 shadow-xl lg:w-[40%] border1">
+
+            <div class="card-body mb-2">
+              <div class="lg:flex gap-5 ">
+                <div><img src="./Images/5.png" class="w-full mb-2" alt=""></div>
+                <div class="">
+                  <div class="flex gap-5 mb-3">
+                    <i class="fa-solid fa-star text-[#F99808] text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-eye text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-heart text-base"></i>
+                    <h6>200</h6>
+                  </div>
+                  <h2 class="card-title mb-2 text-xl	font-extrabold	">World Cup Flags Football</h2>
+                  <p class="text-[#6d6d70]">World Flags Bunting, 32 Countries Flags Double Sides.</p>
+                  <div class="flex gap-2 mt-4">
+                    <h6 class="text-[#ff4343] font-extrabold	">Price - $22.00</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <h6>Delivery Fee : Free</h6>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+          <div class="card mt-4 lg:mt-0 lg:flex card-side bg-base-100 shadow-xl lg:w-[40%] border1 ">
+            <div class="card-body">
+              <div class="lg:flex gap-5">
+                <div><img src="./Images/6.png" class="w-full mb-2" alt=""></div>
+                <div class="">
+                  <div class="flex gap-5 mb-2">
+                    <i class="fa-solid fa-star text-[#F99808] text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-eye text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-heart text-base"></i>
+                    <h6>200</h6>
+                  </div>
+                  <h2 class="card-title mb-2 text-xl	font-extrabold	">World Cup Flags Football</h2>
+                  <p class="text-[#6d6d70]">World Flags Bunting, 32 Countries Flags Double Sides.</p>
+                  <div class="flex gap-2 mt-4">
+                    <h6 class="text-[#ff4343] font-extrabold	">Price - $22.00</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <h6>Delivery Fee : Free</h6>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="lg:flex gap-6 mb-4 lg:ml-40">
+          <div class="card  lg:flex card-side bg-base-100 shadow-xl lg:w-[40%] border1">
+
+            <div class="card-body">
+              <div class="lg:flex gap-5">
+                <div><img src="./Images/7.png" class="w-full mb-2" alt=""></div>
+                <div class="">
+                  <div class="flex gap-5 mb-2">
+                    <i class="fa-solid fa-star text-[#F99808] text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-eye text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-heart text-base"></i>
+                    <h6>200</h6>
+                  </div>
+                  <h2 class="card-title mb-2 text-xl	font-extrabold	">World Cup Flags Football</h2>
+                  <p class="text-[#6d6d70]">World Flags Bunting, 32 Countries Flags Double Sides.</p>
+                  <div class="flex gap-2 mt-4">
+                    <h6 class="text-[#ff4343] font-extrabold	">Price - $22.00</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <h6>Delivery Fee : Free</h6>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+          <div class="card mt-4 lg:mt-0  lg:flex card-side bg-base-100 shadow-xl lg:w-[40%] border1">
+            <div class="card-body">
+              <div class="lg:flex gap-5">
+                <div><img src="./Images/8.png" class="w-full mb-2" alt=""></div>
+                <div class="">
+                  <div class="flex gap-5 mb-2">
+                    <i class="fa-solid fa-star text-[#F99808] text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-eye text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-heart text-base"></i>
+                    <h6>200</h6>
+                  </div>
+                  <h2 class="card-title mb-2 text-xl	font-extrabold	">World Cup Flags Football</h2>
+                  <p class="text-[#6d6d70]">World Flags Bunting, 32 Countries Flags Double Sides.</p>
+                  <div class="flex gap-2 mt-4">
+                    <h6 class="text-[#ff4343] font-extrabold	">Price - $22.00</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <h6>Delivery Fee : Free</h6>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="lg:flex gap-6  lg:ml-40">
+          <div class="card mt-4 lg:mt-0  lg:flex card-side bg-base-100 shadow-xl lg:w-[40%] border1">
+
+            <div class="card-body">
+              <div class="lg:flex gap-5">
+                <div><img src="./Images/9.png" class="w-full mb-2" alt=""></div>
+                <div class="">
+                  <div class="flex gap-5 mb-2">
+                    <i class="fa-solid fa-star text-[#F99808] text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-eye text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-heart text-base"></i>
+                    <h6>200</h6>
+                  </div>
+                  <h2 class="card-title mb-3 text-xl	font-extrabold	">World Cup Flags Football</h2>
+                  <p class="text-[#6d6d70]">World Flags Bunting, 32 Countries Flags Double Sides.</p>
+                  <div class="flex gap-2 mt-4">
+                    <h6 class="text-[#ff4343] font-extrabold	">Price - $22.00</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <h6>Delivery Fee : Free</h6>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+          <div class="card mt-4 lg:mt-0  lg:flex card-side bg-base-100 shadow-xl lg:w-[40%] border1">
+            <div class="card-body">
+              <div class="gap-5 lg:flex ">
+                <div><img src="./Images/10.png" class="w-full mb-2" alt=""></div>
+                <div class="">
+                  <div class="flex gap-5 mb-2">
+                    <i class="fa-solid fa-star text-[#F99808] text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-eye text-base"></i>
+                    <h6>5.0</h6>
+                    <i class="fa-regular fa-heart text-base"></i>
+                    <h6>200</h6>
+                  </div>
+                  <h2 class="card-title mb-3 text-xl	font-extrabold	">World Cup Flags Football</h2>
+                  <p class="text-[#6d6d70]">World Flags Bunting, 32 Countries Flags Double Sides.</p>
+                  <div class="flex gap-2 mt-4">
+                    <h6 class="text-[#ff4343] font-extrabold	">Price - $22.00</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <h6>Delivery Fee : Free</h6>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%] mt-20"></div>
+    <!-- client sec  -->
+    <section>
+      <div class="pt-5">
+        <h1 class="text-3xl	font-extrabold text-center mt-6">Clients Question</h1>
+        <p class="text-center w-[60%] mx-auto	 pt-5 text-[#6d6d70] mb-8">Before we started working together, what were
+          you trying to do? What were the challenges you had? What were you trying to accomplish?
+
+        </p>
+      </div>
+      <div class="lg:flex gap-5 border1 w-[100%] rounded-2xl	p-8">
+        <img src="./Images/11.png" alt="">
+        <div class="gap-4">
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl  font-bold	">
+              Our Equipment </div>
+            <div class="collapse-content">
+              <p class="w-[60%px]">Our equipment. Discover a complete range of innovative fluid distribution equipment
+                designed to meet the needs of the electronics industry, laboratories</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">
+              Hockey Training
+            </div>
+            <div class="collapse-content">
+              <p class="w-[60%px]">Hockey training tips and videos to help you become a better hockey player. We provide
+                you with workouts and drills you can do to become a faster</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">
+              Private Lessons
+            </div>
+            <div class="collapse-content">
+              <p class="w-[60%px]">Enjoy an hour or two hour lesson with your own instructor at a beginner, intermediate
+                or advanced level. Skiers and Riders ages 5 and up can add additional </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">
+              Ski Touring </div>
+            <div class="collapse-content">
+              <p class="w-[60%px]">Ski touring is skiing in the backcountry on unmarked or unpatrolled areas. Touring is
+                typically done off-piste and outside of ski resorts</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">
+              Booking </div>
+            <div class="collapse-content">
+              <p class="w-[60%px]">Booking.com is one of the largest online travel agencies. It is headquartered in
+                Amsterdam, and is a subsidiary of Booking Holdings.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-bold">
+              Pricings </div>
+            <div class="collapse-content">
+              <p class="w-[60%px]">Pricing is a process of fixing the value that a manufacturer will receive in the
+                exchange of services and goods. Pricing method is exercised to adjust the cost of the producer's
+                offerings suitable to both the manufacturer and the customer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class=" border-t-[2px] bg-[#8c8b8b] border-dotted	w-[100%] mt-20"></div>
+    <!-- Get In Touch  -->
+    <section>
+      <div class="pt-5">
+        <h1 class="text-3xl	font-extrabold text-center mt-5">Get In Touch</h1>
+        <p class="text-center w-[60%] mx-auto	 pt-5 text-[#6d6d70] mb-8">Before we started working together, what were
+          you trying to do? What were the challenges you had? What were you trying to accomplish?
+        </p>
+      </div>
+      <div class="lg:flex justify-evenly">
+        <div class="">
+          <div class="card bg-base-100  bg-[#f8fdf0] mb-6 lg:w-[374px] h-[214px]">
+            <div class="card-body">
+              <img src="./Images/Group 1171275317.png" class="w-1/5	" alt="">
+              <p class="text-base	">Phone Number : </p>
+              <h2 class="card-title text-lg	">(+62) 123-321-543</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100 mb-4  bg-[#fffcef] lg:w-[374px] h-[214px]">
+            <div class="card-body">
+              <img src="./Images/Group 1171275318.png" class="w-1/5	" alt="">
+              <p class="text-base	">Email: </p>
+              <h2 class="card-title text-lg	">hockeys@support.com</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100   bg-[#eff5fe] lg:w-[374px] h-[214px]">
+            <div class="card-body">
+              <img src="./Images/Group 1171275321.png" class="w-1/5	" alt="">
+              <p class="text-base	">Location : </p>
+              <h2 class="card-title text-lg	">152/1 Mohakhali Wireless Gate</h2>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="lg:flex gap-6">
+            <div>
+              <label class="form-control  max-w-xs ">
+                <div class="label">
+                  <span class="label-text text-xl	font-bold">Your Name</span>
+                </div>
+                <input type="text" placeholder="Enter your full name"
+                  class="input input-bordered w-[324px] max-w-xs bg-[#fdfbfb] 	" />
+              </label>
+            </div>
+            <div>
+              <label class="form-control  max-w-xs ">
+                <div class="label">
+                  <span class="label-text text-xl	font-bold">Your Email</span>
+                </div>
+                <input type="text" placeholder="Enter Your Email"
+                  class="input input-bordered w-[324px] max-w-xs bg-[#fdfbfb] 	" />
+              </label>
+            </div>
+          </div>
+          <br>
+          <div class="lg:flex gap-6">
+            <div>
+              <label class="form-control  max-w-xs ">
+                <div class="label">
+                  <span class="label-text text-xl	font-bold">Subject</span>
+                </div>
+                <input type="text" placeholder="Enter your Subject"
+                  class="input input-bordered w-[324px] max-w-xs bg-[#fdfbfb] 	" />
+              </label>
+            </div>
+            <div>
+              <label class="form-control max-w-xs ">
+                <div class="label">
+                  <span class="label-text text-xl	font-bold">Phone Number</span>
+                </div>
+                <input type="text" placeholder="Enter your Phone Number"
+                  class="input input-bordered w-[324px] max-w-xs bg-[#fdfbfb] 	" />
+              </label>
+            </div>
+          </div>
+          <div class="mt-4">
+            <label class="form-control">
+              <div class="label">
+                <span class="label-text text-xl	font-bold">Message</span>
+              </div>
+              <textarea class="textarea border1 lg:w-full h-[370px]" placeholder="Enter Your Message"></textarea>
+            </label>
+          </div>
+          <div class="card-actions justify-center mt-4">
+            <button class="btn bg-[#FF4240] border-[#FF4240] text-[#FFF] w-full">Send Message</button>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- social link sec  -->
+    <section>
+      <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded h-[150px]">
+
+        <h2 class="text-xl	font-bold">Social Media</h2>
+
+        <nav>
+          <div class="grid grid-flow-col gap-5">
+
+            <a href=""><i class="fa-brands fa-twitter text-2xl	"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f text-2xl	"></i></a>
+            <a href=""><i class="fa-brands fa-instagram text-2xl	"></i></a>
+            <a href=""><i class="fa-brands fa-github text-2xl	"></i></a>
+          </div>
+        </nav>
+
+      </footer>
+    </section>
+    <!-- footer sec 2 -->
+    <footer class="footer  p-20 bg-[#131318] text-[#FFF] text-base-content mt-7  ">
+      <aside>
+        <h1 class="text-3xl	font-extrabold	">Get In Touch</h1>
+        <p class="text-[#a1a1a3]">Other forms: got in touch; getting in touch; gets in touch; <br> gotten in touch.
+          Definitions of get in touch.
+        </p>
+        <p class="text-[#a1a1a3]"><i class="fa-regular fa-envelope text-[#FF4240] mr-4
+          "></i>hockeys@support.com</p>
+        <p class="text-[#a1a1a3]"><i class="fa-solid fa-phone text-[#FF4240] mr-4
+          "></i>(+62) 123-321-543</p>
+      </aside>
+      <div class=" footer grid gap-8   lg:gap-4 grid-cols-2 grid-rows-1 ">
+        <div class=" footer grid  gap-3 col-span-2 lg:gap-4 grid-cols-3 grid-rows-1">
+          <nav>
+            <header class="footer-title">Company</header>
+            <a class="link link-hover">Leadership</a>
+            <a class="link link-hover">Careers</a>
+            <a class="link link-hover">News & Article</a>
+            <a class="link link-hover">Legal Notice</a>
+          </nav>
+          <nav>
+            <header class="footer-title">Support</header>
+            <a class="link link-hover">Help Center</a>
+            <a class="link link-hover">FAQ</a>
+            <a class="link link-hover">Ticket Support</a>
+            <a class="link link-hover">Contact Us</a>
+          </nav>
+        </div>
+        <div class="footer flex justify-center ml-6 lg:ml-1">
+          <nav>
+            <header class="footer-title">Services</header>
+            <a class="link link-hover">Academy</a>
+            <a class="link link-hover">Group Lesson</a>
+            <a class="link link-hover">Private Lesson</a>
+            <a class="link link-hover">Hockeys for kids</a>
+            <a class="link link-hover">Hockeys for Adult</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
